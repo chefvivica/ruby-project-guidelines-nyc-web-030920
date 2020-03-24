@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 3) do
 
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
+    t.string "location"
   end
 
   create_table "users", force: :cascade do |t|

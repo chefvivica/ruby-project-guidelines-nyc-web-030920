@@ -1,4 +1,4 @@
-require_relative '../config/environment'
+require_relative '/config/environment'
 
 puts "Welcome! Please enter your ZIP Code:"
 zip = gets.chomp

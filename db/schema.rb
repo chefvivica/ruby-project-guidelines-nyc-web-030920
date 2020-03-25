@@ -10,16 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 3) do
+ActiveRecord::Schema.define(version: 20200325191707) do
 
   create_table "reservations", force: :cascade do |t|
-    t.integer "user_key"
-    t.integer "restaurant_key"
+    t.integer "user_id"
+    t.integer "restaurant_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
-    t.string "name"
-    t.string "location"
+    t.string   "name"
+    t.string   "location"
+    t.string   "food_type"
+    t.datetime "opening_time"
+    t.datetime "closing_time"
+    t.float    "price_range"
+    t.boolean  "if_delivery?"
   end
 
   create_table "users", force: :cascade do |t|

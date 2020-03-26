@@ -6,3 +6,4 @@ require_all 'lib'
 
 require_all 'app/models'
 require_all 'db'
+ActiveRecord::Base.logger = nil

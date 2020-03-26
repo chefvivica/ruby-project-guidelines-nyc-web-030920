@@ -1,14 +1,21 @@
 require_relative '../config/environment'
 
-puts "Welcome! Please enter your ZIP Code:"
-zip = gets.chomp
-results = Restaurant.all.select{|restaurant| restaurant.location == zip}
-puts "What type of food would you like?"
-type = gets.chomp
-type_results = results.select{|restaurant| restaurant.food_type == type}
-puts "Would you like delivery? (True/False)"
-delivery = gets.chomp
-delivery_results = type_results.select{|restaurant| restaurant.if_delivery? == delivery}
-puts "Here are the restaurants that matched your search:"
-names = delivery_results.map{|restaurant| restaurant.name}
 
+
+prompt = TTY::Prompt.new
+zip = prompt.ask('Welcome! Please enter your ZIP Code:')
+type = prompt.ask('What type of food would you like?')
+if prompt.yes?("Would you like delivery?") do
+    delivery = true
+    end
+    else delivery = false
+    end
+
+
+zip_results = Restaurant.find_by_zip(zip.to_s)
+type_results = Restaurant.find_by_type(type.to_s)
+delivery_results = Restaurant.find_by_delivery(delivery)
+full_results = zip_results + type_results + delivery_results
+names = full_results.uniq.map{|restaurant| restaurant.name}
+puts "Here are the restaurants that matched your search:"
+puts names

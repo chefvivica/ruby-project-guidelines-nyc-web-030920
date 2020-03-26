@@ -1,8 +1,8 @@
 class CreateReservations < ActiveRecord::Migration
     def change
         create_table :reservations do |t|
-        t.integer :user_key
-        t.integer :restaurant_key
+        t.references :user, foreign_key: true
+        t.references :restaurant, foreign_key: true
         end
     end
 end

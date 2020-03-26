@@ -1,8 +1,10 @@
 require_relative '../config/environment'
+require 'pry'
 
 puts "Welcome! Please enter your ZIP Code:"
 zip = gets.chomp
-results = Restaurant.all.select{|restaurant| restaurant.location == zip}
+puts zip
+results = Restaurant.all.select{|restaurant| restaurant.location == "#{zip}"}
 
 puts "What type of food would you like?"
 type = gets.chomp

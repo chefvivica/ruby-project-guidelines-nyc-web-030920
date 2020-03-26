@@ -15,6 +15,10 @@ restaurant4 = Restaurant.create(name: "restaurant4name", location: "00002", if_d
 reservation1 = Reservation.create(user: user1, restaurant: restaurant1)
 reservation2 = Reservation.create(user: user2, restaurant: restaurant2)
 
+puts "Welcome! Please enter your ZIP Code:"
+zip = gets.chomp
+puts zip
+results = Restaurant.all.select{|restaurant| restaurant.location == "#{zip}"}
 #binding.pry
 # parsed_data.each do |restaurant| 
 # Restaurant.create(name: restaurant["name"], location: restaurant["location"])

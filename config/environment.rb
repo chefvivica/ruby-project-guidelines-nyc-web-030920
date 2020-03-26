@@ -5,4 +5,4 @@ ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: 'db/develo
 require_all 'lib'
 
 require_all 'app/models'
-#require_all 'db'
+require_all 'db'

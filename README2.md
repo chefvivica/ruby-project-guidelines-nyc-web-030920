@@ -4,9 +4,9 @@ Hi everyone, our App is called Easy Reservation
 # Description
 By using our App, users are able to do: 
 
-1. Enter a zipcode and be given suggestion of a nearby restauants.
+1. Enter a zipcode and be given suggestion of a nearby restaurants.
 
-2. Enter a type of food and be given suggetion of restauants. 
+2. Enter a type of food and be given suggestion of restaurants. 
 
 3. Choose if delivery or eat-in.
 

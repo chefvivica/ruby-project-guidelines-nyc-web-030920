@@ -3,7 +3,7 @@ require 'pry'
 
 prompt = TTY::Prompt.new
 
-zip = prompt.ask('Welcome to Easy Meal App! Please enter your ZIP Code:')
+zip = prompt.ask('Welcome to Easy Reservation App! Please enter your ZIP Code:')
 type = prompt.ask('What type of food would you like?')
 
 #find a match by zip code search
@@ -40,7 +40,7 @@ selection_object = Restaurant.find_by_name(selection)
     end
     user = User.create(name: user_name, phone_number: user_phone_number)
     reservation = Reservation.create(user: user, restaurant: selection_object)
-    puts "Your reservation has been created: #{stay_or_go} for #{user.name} at #{selection}. Thank you for using Easy Meal App"
+    puts "Your reservation has been created: #{stay_or_go} for #{user.name} at #{selection}. Thank you for using Easy Reservation App"
  end
 
 

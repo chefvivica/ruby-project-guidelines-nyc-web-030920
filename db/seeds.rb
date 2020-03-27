@@ -8,7 +8,7 @@ Reservation.destroy_all
 
 user1 = User.create(name: "User1")
 user2 = User.create(name: "User2")
-restaurant1 = Restaurant.create(name: "restaurant1name", location: "00000", if_delivery?: false, food_type: "Italian")
+restaurant1 = Restaurant.create(name: "restaurant1name", location: "00000", if_delivery?: true, food_type: "Italian")
 restaurant2 = Restaurant.create(name: "restaurant2name", location: "00000", if_delivery?: true, food_type: "Italian")
 restaurant3 = Restaurant.create(name: "restaurant3name", location: "00002", if_delivery?: true, food_type: "Chinese")
 restaurant4 = Restaurant.create(name: "restaurant4name", location: "00003", if_delivery?: false, food_type: "Seafood")

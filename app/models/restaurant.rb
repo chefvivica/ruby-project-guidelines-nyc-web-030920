@@ -10,4 +10,7 @@ class Restaurant < ActiveRecord::Base
     def self.find_by_delivery(delivery)
         self.all.select{|restaurant| restaurant.if_delivery? == true}
     end
+    def self.find_by_name(rname)
+        self.all.find{|restaurant| restaurant.name == rname}
+    end
 end 
